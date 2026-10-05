@@ -1,0 +1,20 @@
+﻿# Eclipse
+.metadata/
+Servers/
+.recommenders/
+*.class
+*.log
+
+# Maven
+target/
+*.jar
+*.war
+
+# IDE
+.settings/
+.project
+.classpath
+
+# OS generated files
+.DS_Store
+Thumbs.db
