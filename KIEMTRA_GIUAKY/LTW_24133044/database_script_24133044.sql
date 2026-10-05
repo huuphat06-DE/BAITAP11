@@ -19,7 +19,7 @@ CREATE TABLE books (
     isbn INT,
     title VARCHAR(200),
     publisher VARCHAR(100),
-    price DECIMAL(6, 2),
+    price DECIMAL(12, 0),
     description TEXT,
     publish_date DATE,
     cover_image VARCHAR(100),
@@ -71,3 +71,12 @@ CREATE TABLE order_items (
     FOREIGN KEY (bookid) REFERENCES books(bookid) ON DELETE CASCADE
 );
 
+
+-- Chèn dữ liệu mẫu cho bảng books
+SET IDENTITY_INSERT books ON;
+INSERT INTO books (bookid, isbn, title, publisher, price, quantity) VALUES 
+(1, 123456, N'Mắt Biếc', N'NXB Trẻ', 150000, 50),
+(2, 123457, N'Tôi Thấy Hoa Vàng Trên Cỏ Xanh', N'NXB Trẻ', 120000, 40),
+(3, 123459, N'Dế Mèn Phiêu Lưu Ký', N'NXB Kim Đồng', 85000, 100),
+(4, 123460, N'Chí Phèo', N'NXB Văn Học', 90000, 30);
+SET IDENTITY_INSERT books OFF;
